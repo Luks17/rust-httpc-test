@@ -7,13 +7,13 @@ const END_POINT: &str = "https://jsonplaceholder.typicode.com";
 
 #[tokio::main]
 async fn main() -> Result<()> {
-	let hc = httpc_test::new_client(END_POINT)?;
+    let hc = httpc_test::new_client(END_POINT)?;
 
-	let req = hc.do_get("/posts/1").await?;
-	req.print().await?;
+    let req = hc.do_get("/posts/1").await?;
+    req.print().await?;
 
-	let req = hc.do_get("/todos/1").await?;
-	req.print().await?;
+    let req = hc.do_get("/todos/1").await?;
+    req.print().await?;
 
-	Ok(())
+    Ok(())
 }

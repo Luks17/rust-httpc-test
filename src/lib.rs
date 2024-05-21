@@ -1,3 +1,4 @@
+mod auth_header;
 mod client;
 mod cookie;
 mod error;
